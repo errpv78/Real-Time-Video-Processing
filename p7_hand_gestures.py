@@ -130,14 +130,14 @@ while (1):
             cv2.putText(frame, 'reposition', (10, 50), font, 2, (0, 0, 255), 3, cv2.LINE_AA)
 
         # show the windows
-        cv2.imshow('mask', mask)
+        # cv2.imshow('mask', mask)
         cv2.imshow('frame', frame)
     except:
         # print(e)
         pass
 
     k = cv2.waitKey(5) & 0xFF
-    if k == 27:
+    if k == ord('q'):
         break
 
 cv2.destroyAllWindows()
