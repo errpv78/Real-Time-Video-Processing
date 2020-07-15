@@ -18,7 +18,7 @@ def encode_face_data():
     dataset = 'face_recognition_dataset/'
 
     # Output encoding file
-    encodings_file = '../Face_Liveness/encodings.pickle'
+    encodings_file = 'encodings.pickle'
 
     # Face detection method (cnn or hog)
     detection_method = 'cnn'
@@ -93,7 +93,7 @@ def recognize_faces_from_image():
                 else:
                     print('File Not Found!')
 
-            encodings_file = '../Face_Liveness/encodings.pickle'
+            encodings_file = 'encodings.pickle'
             detection_method = 'hog'
 
             # load the known faces and embeddings
