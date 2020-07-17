@@ -7,8 +7,8 @@ from imutils import paths
 import shutil
 import face_recognition
 import pickle
-from os import path
-from .Add_New_Faces import add_face_data_from_video, add_face_data_from_images
+from os import path, getcwd
+from Add_New_Faces import add_face_data_from_video, add_face_data_from_images
 
 def encode_face_data():
     # grab the paths to the input images in our dataset
@@ -88,11 +88,15 @@ def recognize_faces_from_image():
             while True:
                 img_name = input('Enter image file name(with extension), image must be in recognize_faces folder: ')
                 img_path = 'recognize_faces/' + img_name
-                if path.exists(img_path):
+                try:
+                    image = cv2.imread(img_path)
+                    image = cv2.resize(image, (600, 600))
                     break
-                else:
+                except:
+                    print(img_path)
                     print('File Not Found!')
 
+            # img_path = 'recognize_faces/parikh.png'
             encodings_file = 'encodings.pickle'
             detection_method = 'hog'
 
@@ -161,9 +165,9 @@ def recognize_faces_from_image():
 
 
 def recognize_face_live_stream():
+
     # Initializing variables
     encodings = "encodings.pickle"
-    display = 1
     detection_method = 'hog'
 
     # load the known faces and embeddings
@@ -265,6 +269,7 @@ while True:
               Press 3 to recognize faces in images\n \
               Press 4 to recognize faces in live video stream \n \
               Press 5 to quit: \n'))
+    # print(getcwd())
     if t==1:
         add_face_data_from_images()
         print('Please wait, updating the encoding files')

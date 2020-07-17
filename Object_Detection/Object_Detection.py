@@ -96,3 +96,5 @@ def object_detection():
     # cleanup
     cv2.destroyAllWindows()
     cap.release()
+
+object_detection()

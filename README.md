@@ -10,7 +10,7 @@ haarcascades: haarcascades file<br>
 recognize_faces: directory to put images in which faces are to be recognized<br>
 Add_New_Face.py: Functions to add new faces to existing encodings<br>
 Face_Recognition.py: Menu driven programm to add new face from photos folder(the name of folder should be name of person and the folder should be located in face_recognition_dataset), add new face from live vide, recognize face from images(images should be in recognize_faces folder), and recognize face from webcam video.
-
+Face_Recog-2020-07-17_15.48.01.mp4
 
 ## Object_Detection
 Object detection using pre-trained caffe model with classes: "background", "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"<br>
