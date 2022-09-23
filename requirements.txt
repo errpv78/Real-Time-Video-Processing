@@ -39,7 +39,7 @@ pickleshare==0.7.5
 Pillow==7.0.0
 ply==3.11
 prometheus-client==0.7.1
-protobuf==3.12.1
+protobuf==3.18.3
 py==1.8.1
 python-bidi==0.4.2
 python-dateutil==2.8.1
